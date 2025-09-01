@@ -1,0 +1,73 @@
+Structure of the ZIP-ready XAMPP media server: This is V1 your Welcome.
+
+media_server_xampp/
+├── htdocs/
+│ ├── config.php
+├── database/
+│ └── media.sql
+│ ├── index.php (Main)
+│ ├── home.php
+│ ├── tv.php
+│ ├── tv_show.php
+│ ├── music.php
+│ ├── other.php (other media not yet implemented)
+
+│ ├── login.php
+│ ├── register.php
+│ ├── profile.php
+│ ├── logout.php
+
+│ ├── admin.php
+│ └── users.php
+│ └── edit_user.php
+│ └── delete_user.php
+│ └── scan.php (scans media folders adds to database converts to mp4 gets cover art for movies and tv)
+│ ├── stream.php (Streams the Movies, TV, and music)
+├── ffmpeg/ (FFmpeg and FFprobe for media conversion)
+
+├── covers/ (folder for downloaded Movie and Tv covers)
+│ └── placeholder.jpg
+├── Music Folder
+│ └── covers/ (folder for downloaded Music covers)
+│ └── placeholder.jpg
+├── Profile Image Folder
+│ └── guest.png (If no image defaults to this image)
+├── Movie Folder (For Movies)
+├── Tv Folder (Has separate folders for Tv Seasons able to make new folder from admin) 
+├── Images folder (For logo and other images)
+
+Bootstrap 5 UI
+Paths for XAMPP windows
+user/admin register login 
+profile and profile image
+
+Admin
+Add/Edit/Delete Movies Tv shows Music (other)
+Edit/Delete Users
+
+Auto Library on upload movies and tv only.
+Library Scan Manual 
+
+
+
+**Setup Instructions for Windows/XAMPP:**
+
+
+1. Copy `minimedia.rar` to `C:/xampp/htdocs/minimedia`. or what ever you want to call it.
+2. Import `database/media.sql` into MySQL using phpMyAdmin.
+3. Edit `config.php`:
+
+- Set `$tmdb_api` with your TMDb API key (Free signup).
+Drop in media to correct folder then step 4 or upload from admin.
+4. Run `scan.php` once via browser to populate the database.
+5. Open `http://localhost/minimedia/index.php` in your browser.
+6. Click Play on any movie/TV show or Music to stream via `stream.php`.
+
+Admin user and pass is just admin/admin
+
+Test Account test/test
+
+This works for me in Firefox, IE and in Chrome.
+Should work on smart tv devices xbox.
+Other than that you on your own. Have fun!
+
