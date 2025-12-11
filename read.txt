@@ -63,7 +63,10 @@ Drop in media to correct folder then step 4 or upload from admin.
 5. Open `http://localhost/minimedia/index.php` in your browser.
 6. Click Play on any movie/TV show or Music to stream via `stream.php`.
 
+http://localhost/minimedia/admin.php
 Admin user and pass is just admin/admin
+if it wont login try changing pass in database with: $2y$10$FY8zmQ3/tWtFlc/FhUiPA.2SGon3tgPI4Yxb9pxjsh08sfi6PJ6hG
+or make a new account.
 
 Test Account test/test
 
